@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <title>Runforตุ๊ดตู่</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #00ffbf;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 20%;
+    height: 620px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    width: 80%;
+    background-color: #f1f1f1;
+    height: 620px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+  <header>
+    <h2>RUN FOR ตุ๊ดตู่</h2>
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+        <li><a href="http://www.su.ac.th/th/index.php"  target="_blank">มหาวิทยาลัยศิลปากร</a></li>
+        <li><a href="https://www.cp.su.ac.th/"  target="_blank">ภาควิชาคอมพิวเตอร์</a></li>
+        <li><a href="http://www.math.sc.su.ac.th/web3/"  target="_blank">ภาควิชาคณิตศาสตร์</a></li>
+      </ul>
+
+    </nav>
+
+    <article>
+      <h2>Register</h2>
+
+      <form method="post" action="result.php">
+        First name :
+        <input type="text" name="firstname">
+
+        Last name :
+        <input type="text" name="lastname">
+        <br><br>
+        Tel :
+        <input type="text" name="tel">
+
+        Email :
+        <input type="text" name="email">
+        <br><br>
+        Address :
+        <input type="text" name="address" size="80">
+        <br><br>
+        Gender :<br>
+        <input type="radio" name="gender" value="male"> Male<br>
+       <input type="radio" name="gender" value="female"> Female<br>
+       <input type="radio" name="gender" value="other"> Other
+       <br><br>
+       Date :
+        <input type="text" name="date"">
+
+       Month :
+        <input type="text" name="Month"">
+
+      Year :
+       <input type="text" name="Year"">
+      <br><br>
+      Type run :
+      <select name="typerun">
+       <option value="5km">5km</option>
+       <option value="10km">10km</option>
+       <option value="21km">21km</option>
+       <option value="42km">42km</option>
+      </select>
+      <br><br>
+      level Age :
+      <select name="levelAge">
+       <option value="lower15">>15 year</option>
+       <option value="16-39">16 - 39 year</option>
+       <option value="40-59">40 - 59 year</option>
+       <option value="upper60">< 60 year</option>
+      </select>
+      <br><br>
+      size shirt : <br>
+      <input type="radio" name="sizeshirt" value="S" checked>S<br>
+      <input type="radio" name="sizeshirt" value="M">M<br>
+      <input type="radio" name="sizeshirt" value="L">L<br>
+      <input type="radio" name="sizeshirt" value="XL">XL<br>
+      <input type="radio" name="sizeshirt" value="XXL">XXL<br>
+      <br>
+      cost_register :
+      <select name="cost_register">
+       <option value="normal">Normal 300 Baht</option>
+        <option value="Student">Student 150 Baht</option>
+         <option value="OlderPerson">Older Person free</option>
+      </select>
+      <br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+
+    </article>
+  </section>
+
+  <footer>
+    <p>tel : 034xxxxxxx</p>
+  </footer>
+
+</body>
+
+</html>
